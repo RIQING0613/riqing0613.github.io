@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="styles/styles.css"> <!-- 引用外部CSS文件 -->
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+
+  <!-- 大图容器，包含按钮 -->
+  <div class="full-img" id="full-img-container">
+    <img src="images/123.jpg" alt="Full Image" id="full-image">
+    <button id="toggle-darken">darken</button> <!-- 按钮在大图的左上角 -->
+  </div>
+
+  <!-- 缩略图的容器 -->
+  <div class="gallery">
+    <img src="images/123.jpg" alt="Image 1" onclick="showImage(this)">
+    <img src="images/456.jpg" alt="Image 2" onclick="showImage(this)">
+    <img src="images/789.jpg" alt="Image 3" onclick="showImage(this)">
+    <img src="images/10.jpg" alt="Image 4" onclick="showImage(this)">
+  </div>
+
+  <script src="script/script.js"></script> <!-- 引用外部JS文件 -->
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .full-img {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .full-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter 0.2s; /* 过渡效果 */
+  }
+  
+  button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1; /* 保证按钮在图片上方 */
+  }
+  
+  /* 缩略图容器 */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4等分，缩略图占满整个宽度 */
+    width: 80%;
+    max-width: 600px;
+    margin-top: -4px; /* 缩略图与大图重合，去掉空隙 */
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    margin: 0; /* 没有间距 */
+    transition: transform 0.2s;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 变暗状态 */
+  .darken {
+    filter: brightness(0.5);
+  }
