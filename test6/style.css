@@ -1,0 +1,18 @@
+/* styles.css */
+#game-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#output {
+    margin-top: 20px;
+    white-space: pre-wrap;
+}
+
+/* 新增背景样式 */
+#gameCanvas {
+    background-image: url('xbtp.png');
+    /* 假设背景图片名为 treasure-hunt-background.jpg */
+    background-size: cover;
+    background-position: center;
+}
