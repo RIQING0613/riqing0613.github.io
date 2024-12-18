@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Zoom and Drag</title>
+    <link rel="stylesheet" href="7.css">
+    
+</head>
+<body>
+    <div id="map-container">
+        <img id="map-image" src="xbtp.png" alt="Map" usemap="#map">
+        <map name="map">
+            <area shape="rect" coords="168,82,330,232" href="javascript:void(0);" data-message="恭喜您，获得了一个宝物碎片！" data-image="yf.png" alt="喻繁">
+            <area shape="rect" coords="694,24,817,247" href="javascript:void(0);" data-message="恭喜您，获得了一个宝物碎片！" data-image="cjs.png" alt="陈景深">
+            <area shape="rect" coords="931,148,1152,341" href="javascript:void(0);" data-message="恭喜您，获得了一个宝物碎片！" data-image="qy.png" alt="祁煜">
+            <area shape="rect" coords="80,514,232,648" href="javascript:void(0);" data-message="恭喜您，获得了一个宝物碎片！" data-image="lsm.png" alt="鱼鱼秋秋人">
+            <area shape="rect" coords="556,444,800,651" href="javascript:void(0)"data-message="sorry!这是陷阱！女巫出现" data-image="guard.png" alt="女巫">
+            <area shape="rect" coords="1124,532,1232,611" href="javascript:void(0);"data-message="出现了图书馆，请去学习" data-image="library.png" alt="图书馆">
+            <!-- 在 map-container 内添加音量控制滑块 -->
+
+        </map>
+        <div id="movable-target" style="position: absolute; background-image: url('explorer.png');"></div>
+    </div>
+    <script src="7.js"></script>
+    <!--兰州2框-->
+<div id="lanzhou2-box" style="display: none; position: absolute; z-index: 107;"></div>
+<!--青岛2框-->
+<div id="qingdao2-box" style="display: none; position: absolute; z-index: 107;"></div>
+<!--山西2框-->
+<div id="shanxi2-box" style="display: none; position: absolute; z-index: 107;"></div>
+<!--重庆2框-->
+<div id="chongqing2-box" style="display: none; position: absolute; z-index: 107;"></div>
+
+</div>
+
+    <div id="start-game-box">
+        <p id="unique-id">变成勇敢的鱼鱼探索者探寻宝物吧！按键上下左右控制勇敢的鱼鱼，空格获得宝物碎片，注意哦，在探索的途中不要忘记了去图书馆，还要小心巫婆啊啊啊</p>
+        <input type="text" id="id-input" placeholder="输入游戏ID">
+        <input type="text" id="nickname-input" placeholder="你的昵称！">
+        <button id="start-game-button">开始游戏</button>
+    </div>
+
+    <div id="message-box"></div>
+    <div id="image-box"></div>
+    <div id="qingdao-box"></div>
+    <div id="trap-box"></div>
+    <div id="reward-box"></div>
+    <div id="video-box"></div>
+    <div id="shanxi-box"></div>
+    <div id="lanzhou-box"></div>
+    <div id="chongqing-box"></div>
+
+</div>
+</div>
+</body>
+</html>
