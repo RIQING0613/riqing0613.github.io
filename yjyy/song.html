@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐网站</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <!-- 头部 -->
+   <header class="header">
+    <div class="w nav">
+        <!--logo设计-->
+        <a href="#" class="logo">
+            <img src="images/logo1.png" alt="">
+        </a> 
+        <!--导航条-->
+            <ul class="nav-meau">
+                <li><a href="index.html">音乐馆</a></li>
+                <li><a href="singer.html">歌手</a></li>
+                <li><a href="song-list.html">歌单</a></li>
+                <li class="active"><a href="song.html">歌曲</a></li>
+                <li><a href="login.html">登录</a></li>
+            </ul>
+            <!--搜索框-->
+            <div class="search">
+                <input type="text" name="" id="" placeholder="音乐、MV、歌手等"><button>搜索</button>
+            </div>
+        </div>
+    </header>
+    <!-- 歌曲 主体 -->
+    <div class="contentSong py-3 bg1">
+        <div class="w d-flex">
+            <div class="contentSong-l bg2">
+                <!--导航栏1-->
+                <ul class="list-col">
+                    <li class="first">巅峰榜</li>
+                    <li class="active"><a href="#">飙升榜</a></li>
+                    <li><a href="#">热歌榜</a></li>
+                    <li><a href="#">新歌榜</a></li>
+                    <li><a href="#">流行指数榜</a></li>
+                    <li><a href="#">MV榜</a></li>
+                    <li><a href="#">听歌识曲榜</a></li>
+                </ul>
+                 <!--导航栏2-->
+                <ul class="list-col">
+                    <li class="first">地区榜</li>
+                    <li class=""><a href="#">飙升榜</a></li>
+                    <li><a href="#">新歌榜</a></li>
+                    <li><a href="#">热歌榜</a></li>
+                    <li><a href="#">听歌识曲榜</a></li>
+                    <li><a href="#">MV榜</a></li>
+                    <li><a href="#">流行指数榜</a></li>
+                </ul>
+                <!--导航栏3-->
+                <ul class="list-col">
+                    <li class="first">抖音排行榜</li>
+                    <li class=""><a href="#">网络歌曲榜</a></li>
+                    <li><a href="#">国风热歌榜</a></li>
+                    <li><a href="#">K歌金曲榜</a></li>
+                    <li><a href="#">综艺新歌榜</a></li>
+                    <li><a href="#">ACG新歌榜</a></li>
+                    <li><a href="#">电音榜</a></li>
+                </ul>
+            </div>
+            <div class="contentSong-r">
+                <h2 class="tit py-3">流行指数榜<span>2022-12-20</span></h2>
+                <div class="select-btn pb-3">
+                    <button class="active">播放全部</button>
+                    <button>添加到</button>
+                    <button>下载</button>
+                    <button>批量操作</button>
+                </div>
+                <ul class="songList">
+                    <li class="head">
+                        <div class="col-2"></div>
+                        <div class="col-5">歌曲</div>
+                        <div class="col-2">歌手</div>
+                        <div class="col-1">时长</div>
+                    </li>
+                    <li class="active">
+                        <div class="col-2">
+                            <div class="num text-red">1</div>
+                            <span class="tag">飙升</span>
+                        </div>
+                        <!--样式1-->
+                        <div class="col-5 itemSong">
+                            <img src="images/pic1.png" alt="">
+                            <p><a href="#">shadow of sun</a></p>
+                            <div class="play">
+                                <button class="btn-play"></button>
+                            </div>
+                        </div>
+                        <div class="col-2">Max Elto</div>
+                        <div class="col-1">02:25</div>
+                    </li>
+                    <li>
+                        <!--样式2-->
+                        <div class="col-2">
+                            <div class="num text-red">2</div>
+                        </div>
+                        <div class="col-5 itemSong">
+                            <img src="images/pic2.jpg" alt="">
+                            <p><a href="#">错位时空</a></p>
+                            <div class="play">
+                                <button class="btn-play"></button>
+                            </div>
+                        </div>
+                        <div class="col-2">艾辰</div>
+                        <div class="col-1">03:23</div>
+                    </li>
+                    <li>
+                        <!--样式3-->
+                        <div class="col-2">
+                            <div class="num text-red">3</div>
+                        </div>
+                        <div class="col-5 itemSong">
+                            <img src="images/pic3.jpg" alt="">
+                            <p><a href="#">星辰大海</a></p>
+                            <div class="play">
+                                <button class="btn-play"></button>
+                            </div>
+                        </div>
+                        <div class="col-2">黄霄雲</div>
+                        <div class="col-1">03:27</div>
+                    </li>
+                    <li>
+                        <!--样式4-->
+                        <div class="col-2">
+                            <div class="num">4</div>
+                        </div>
+                        <div class="col-5 itemSong">
+                            <img src="images/pic4.jpg" alt="">
+                            <p><a href="#">baby</a></p>
+                            <div class="play">
+                                <button class="btn-play"></button>
+                            </div>
+                        </div>
+                        <div class="col-2">justin bieber</div>
+                        <div class="col-1">03:34</div>
+                    </li>
+                    <li>
+                        <!--样式5-->
+                        <div class="col-2">
+                            <div class="num">5</div>
+                        </div>
+                        <div class="col-5 itemSong">
+                            <img src="images/pic5.jpg" alt="">
+                            <p><a href="#">我们俩</a></p>
+                            <div class="play">
+                                <button class="btn-play"></button>
+                            </div>
+                        </div>
+                        <div class="col-2">郭顶</div>
+                        <div class="col-1">03:13</div>
+                    </li>
+                </ul>
+                <!-- 歌曲播放 -->
+                <div class="fixedSong">
+                    <audio src="music/1.mp3" controls></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--外联式js-->
+    <script src="js/song.js"></script>
+</body>
+
+</html>

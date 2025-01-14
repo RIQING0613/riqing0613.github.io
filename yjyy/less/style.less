@@ -1,0 +1,598 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+/* 宽度和长度 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 5px;
+}
+
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 10px;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #ccc;
+}
+
+
+body {
+    color: #fff;
+    line-height: 1.5;
+    font-family: poppin, Tahoma, Arial, sans-serif;
+    font-family: Tahoma, Arial, sans-serif, 9;
+    background: rgb(30, 30, 31);
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+//主题色1
+@color1: rgb(49, 194, 124);
+
+.bg1 {
+    background: rgb(23, 23, 24);
+}
+
+.bg2 {
+    background: rgb(30, 30, 31);
+}
+
+.text-red {
+    color: #ff4222;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.py-3 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.pb-3 {
+    padding-bottom: 25px;
+}
+.mt-3 {
+    margin-top: 25px;
+}
+.mt-2 {
+    margin-top: 15px;
+}
+.col-1 {
+    padding: 0 15px;
+    width: 10%;
+}
+
+.col-2 {
+    padding: 0 15px;
+    width: 20%;
+}
+
+.col-3 {
+    padding: 0 15px;
+    width: 30%;
+}
+
+.col-5 {
+    padding: 0 15px;
+    width: 50%;
+}
+
+// 标题样式
+.title {
+    padding: 25px 0;
+    text-align: center;
+    letter-spacing: .2em;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+// 标签样式
+.tag {
+    padding: 2px 5px;
+    color: #fff;
+    background: #ff4222;
+    font-size: 12px;
+}
+
+// 横 列表样式
+.list-row {
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+        a {
+            margin: 0 25px;
+        }
+
+        &:hover a,
+        &.active a {
+            color: @color1;
+        }
+    }
+}
+
+// 选择 列表样式
+.list-select {
+    display: flex;
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    li {
+        margin-right: 20px;
+
+        a {
+            display: flex;
+            height: 30px;
+
+            &:hover {
+                color: @color1;
+            }
+        }
+    }
+
+    .list-all {
+        margin-right: 30px;
+
+        a {
+            padding: 0 8px;
+            color: #fff;
+            background: @color1;
+        }
+    }
+}
+
+// 竖 列表样式
+//使得列表鼠标扫过后，呈现背景绿色
+.list-col {
+    margin-bottom: 20px;
+
+    .first {
+        margin: 0 20px 10px;
+        padding: 0;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 60px;
+        border-bottom: 1px solid #ccc;
+
+        &:hover {
+            background: transparent;
+        }
+    }
+
+    li {
+        line-height: 38px;
+        padding: 0 20px;
+        cursor: pointer;
+
+        &:hover {
+            transition: all .3s;
+            background: @color1;
+        }
+    }
+
+    .active {
+        background: @color1;
+    }
+}
+
+// 卡片样式
+.card {
+    .pic {
+        margin-bottom: 15px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+
+        img {
+            // height: 224px;
+            object-fit: cover;
+        }
+//点击歌曲图片后，会出现放大动画，并出现播放按钮图片。
+        i {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scale(1);
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .2) url(../images/icon-play.png) no-repeat center;
+            background-size: 70px 70px;
+            opacity: 0;/*完全透明*/
+        }
+//将原本的播放按钮图片设置为： opacity：0（透明度：0），然后动画设为transform：scale（1）（放大）
+//设置鼠标扫过显示动画效果，并将动画透明度设置为1；
+        &:hover img {
+            transition: all .5s;
+            transform: scale(1.1);
+        }
+
+        &:hover i {
+            transition: all .5s;
+            transform: scale(1.1);
+            opacity: 1;
+        }
+    }
+
+    p {
+        a:hover {
+            color: @color1;
+        }
+    }
+
+    span {
+        color: #ccc;
+    }
+
+}
+
+// 圆形 卡片样式
+.card-bdr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        margin-bottom: 15px;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+    }
+
+    a:hover {
+        color: @color1;
+    }
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    height: 85px;
+    z-index: 99;
+    background: rgb(30, 30, 31);
+}
+
+// 导航栏
+.nav {
+    display: flex;
+    height: 100%;
+
+    .logo {
+        margin-right: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 65px;
+
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border-right: 2px solid rgb(254, 169, 42);
+        }
+    }
+    
+    .nav-meau {
+        display: flex;
+        height: 100%;
+        margin-right: 50px;
+
+
+        li {
+            a {
+                padding: 0 25px;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                color: #fff;
+            }
+
+            &:hover a,
+            &.active a {
+                transition: all .3s;
+                background: @color1;
+            }
+        }
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+
+        input {
+            padding-left: 15px;
+            width: 250px;
+            height: 45px;
+            color: #fff;
+            background: transparent;
+            border-bottom: 1px solid @color1;
+        }
+
+        button {
+            padding: 0 25px;
+            height: 45px;
+            cursor: pointer;
+            color: #fff;
+            background: @color1;
+        }
+    }
+}
+
+// 主题部分
+.content {
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+
+        .card {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+// 底部
+.footer {
+    color: #ccc;
+
+    a {
+        color: #ccc;
+    }
+
+    .w {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .tit {
+        margin-bottom: 15px;
+
+    }
+
+
+    .copy {
+        flex: 1;
+
+        .list {
+            display: flex;
+
+            .item {
+                margin-right: 25px;
+                text-align: center;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                img {
+                    margin-bottom: 10px;
+                    width: 50px;
+                }
+            }
+        }
+    }
+}
+
+// 横幅
+.banner {
+    height: 376px;
+    background: url(../images/bg1.webp) repeat-x;
+
+}
+
+// 歌手主体部分
+.contentSinger {
+    .list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .card-bdr {
+            width: 20%;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+// 歌单主体部分
+.contentSongList {
+    .list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .card {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+// 歌曲主体部分
+.contentSong {
+    .d-flex {
+        justify-content: space-between;
+    }
+
+    .contentSong-l {
+        margin: -25px 0;
+        width: 200px;
+    }
+
+    .contentSong-r {
+        width: 950px;
+
+        .tit {
+            font-weight: 400;
+
+            span {
+                margin: 0 15px;
+                font-size: 14px;
+            }
+        }
+
+        .select-btn {
+            button {
+                margin-right: 8px;
+                padding: 0 25px;
+                height: 40px;
+                cursor: pointer;
+                border: 1px solid #ccc;
+                color: #fff;
+                background: transparent;
+
+                &:hover,
+                &.active {
+                    transition: all .3s;
+                    background: @color1;
+                    border: 1px solid @color1;
+                }
+            }
+        }
+
+        .songList {
+            li {
+                display: flex;
+                height: 80px;
+
+                &>div {
+                    display: flex;
+                    align-items: center;
+                }
+
+                &.head {
+                    height: 50px;
+                }
+
+                &.active,
+                &:hover {
+                    transition: all .3s;
+                    background: rgb(36, 36, 37);
+                }
+
+                .num {
+                    margin-right: 10px;
+                    width: 40px;
+                    text-align: center;
+                    font-size: 25px;
+                }
+
+                .itemSong {
+                    position: relative;
+
+                    img {
+                        margin-right: 20px;
+                        width: 70px;
+                        height: 70px;
+                        object-fit: cover;
+                    }
+
+                    a:hover {
+                        color: @color1;
+                    }
+//鼠标扫过后，出现播放按钮。
+                    .play {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        padding: 0 15px;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        opacity: 0;
+
+                        .btn-play {
+                            width: 40px;
+                            height: 40px;
+                            background: transparent url(../images/icon-play.png) no-repeat center;
+                            background-size: contain;
+                            cursor: pointer;
+
+                        }
+                    }
+
+                    &:hover .play {
+                        transition: all .5s;
+                        opacity: 1;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+// 歌曲播放
+.fixedSong {
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+
+    audio {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// 轮播图
+.bannerSwiper {
+    height: 700px;
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50%;
+    }
+
+    .swiper-pagination-bullet {
+        width: 35px;
+        height: 10px;
+        border-radius: 0;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #fff;
+    }
+}

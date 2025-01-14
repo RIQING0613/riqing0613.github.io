@@ -1,0 +1,131 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+}
+
+html{/* 页面背景 */
+	font-size: 8px;/* 整体页面大小 */
+	background: url(../images/login1.jpeg) no-repeat 100% fixed;
+	background-size: cover;
+}
+
+html::before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: -1;
+	backdrop-filter:blur(0.8rem);
+	/* background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%) no-repeat; */
+}
+
+::selection{
+	color: #FFFFFF;
+	background-color: rgb(144,129,241);
+}
+
+.box{
+	display: flex;
+	overflow: hidden;
+	width: 90rem;
+	height: 55rem;
+	/* background-color: rgba(255,255,255,80%); */
+	border-radius: 1.5rem;
+	margin: 10% auto;
+	box-shadow: 0 0 1rem 0.2rem rgb(0 0 0 / 10%);
+}
+
+.box .left{
+	position: relative;
+	width: 45%;
+	height: 100%;
+	background-color: skyblue;
+}
+
+.box .left::before{/* 插入左侧图片 */
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(../images/login2.jpg) no-repeat ;
+	background-size: cover;
+	opacity: 80%;
+}
+
+.box .right{
+	display: flex;
+	width: 55%;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgba(255,255,255,80%);
+}
+
+.box .right h4{/* 开头登入二字字体 */
+	color: rgb(144,129,241);
+	font-size: 3rem;
+	margin-top: 4rem;
+}
+
+.box .right form{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.box .right form .acc{/* 输入框 */
+	outline: none;
+	width: 70%;
+	height: 5rem;
+	font-size: 1.6rem;
+	margin-top: 25px;
+	padding: 0 0 0 1.6rem;
+	border: none;/* 去掉输入框的边框 */
+	border-bottom: 1px solid rgb(144,129,241);
+	color: rgb(144,129,241);
+	background-color: rgba(0,0,0,0);
+}
+
+.right form .acc:focus{ 
+	outline: none;
+	color:#FF7F50;
+	padding: 0 0 0 1.6rem;
+}
+
+.submit{/* 登入按钮 */
+	width: 400px;
+	height: 5rem;
+	color: #f6f6f6;
+	background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+	font-size: 1.4rem;
+	border: none;
+	border-radius: 0.5rem;
+	margin: 40px 0 0 50%;
+	transform: translateX(-50%);
+}
+
+.right .submit:hover{
+	box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 /15%);
+}
+
+.right .down{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1rem;
+	width: 70%;
+}
+
+.right .down a{
+	font-size: 1.3rem;
+	margin-top: 5rem;
+	padding: 1rem 2rem;
+	color: #666;
+}
+
+.right .down a:hover{
+	color: rgb(144,129,241);
+}
