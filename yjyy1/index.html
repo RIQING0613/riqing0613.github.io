@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐网站</title>
+    <!--外联式引入css样式-->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 头部 设计-->
+    <header class="header">
+        <div class="w nav">
+            <!--logo设计-->
+            <a href="#" class="logo">
+                <img src="images/logo1.png" alt="">
+            </a> 
+            <!--导航条-->
+            <ul class="nav-meau">
+                <li class="active"><a href="index.html">音乐馆</a></li>
+                <li><a href="singer.html">歌手</a></li>
+                <li><a href="song-list.html">歌单</a></li>
+                <li><a href="song.html">歌曲</a></li>
+                <li><a href="login.html">登录</a></li>
+            </ul>
+            <!--搜索框-->
+            <div class="search">
+                <input type="text" name="" id="" placeholder="音乐、MV、歌手等"><button>搜索</button>
+            </div>
+        </div>
+    </header>
+    <!-- 轮播图 -->
+    <div class="bannerSwiper">
+        <!--定义轮播图-->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/b1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/b2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/b3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/b4.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/b5.jpg" alt=""></div>
+            </div>
+            <!--分页器-->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!--  歌单推荐 模块-->
+    <div class="content bg1 py-3">
+        <div class="w">
+            <h2 class="title">歌单推荐</h2>
+            <!--搭建 导航栏-->
+            <ul class="list-row">
+                <li class="active"><a href="#">为你推荐</a></li>
+                <li><a href="#">网络歌曲</a></li>
+                <li><a href="#">流行歌曲</a></li>
+                <li><a href="#">经典</a></li>
+                <li><a href="#">排行</a></li>
+            </ul>
+            <!--搭建内容区局-->
+            <div class="list">
+                <!--样例1-->
+                <div class="col-2">
+                    <div class="card">
+                        <div class="pic">
+                            <img src="images/pic1.png" alt="">
+                            <i></i>
+                        </div>
+                        <p><a href="#">氛围音乐｜钢琴与提琴静谧恬美的和鸣</a></p>
+                        <span>播放量：255.5万</span>
+                    </div>
+                </div>
+                 <!--样例2-->
+                <div class="col-2">
+                    <div class="card">
+                        <div class="pic">
+                            <img src="images/pic2.jpg" alt="">
+                            <i></i>
+                        </div>
+                        <p><a href="#">说唱派对 | emo走心励志伤感旋律中文说唱</a></p>
+                        <span>播放量：222.5万</span>
+                    </div>
+                </div>
+                 <!--样例3-->
+                <div class="col-2">
+                    <div class="card">
+                        <div class="pic">
+                            <img src="images/pic3.jpg" alt="">
+                            <i></i>
+                        </div>
+                        <p><a href="#">英文说唱丨欧美腔调与丝滑Flow的化学反应</a></p>
+                        <span>播放量：182.5万</span>
+                    </div>
+                </div>
+                 <!--样例4-->
+                <div class="col-2">
+                    <div class="card">
+                        <div class="pic">
+                            <img src="images/pic4.jpg" alt="">
+                            <i></i>
+                        </div>
+                        <p><a href="#">『忏悔录』emo走心励志旋律情歌中文说唱</a></p>
+                        <span>播放量：218.5万</span>
+                    </div>
+                </div>
+                 <!--样例5-->
+                <div class="col-2">
+                    <div class="card">
+                        <div class="pic">
+                            <img src="images/pic5.jpg" alt="">
+                            <i></i>
+                        </div>
+                        <p><a href="#">甜饼说唱｜超甜的情话只对你说</a></p>
+                        <span>播放量：132.5万</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 精彩推荐 模块 -->
+    <div class="content py-3">
+        <div class="w">
+            <h2 class="title">精彩推荐</h2>
+            <!--搭建内容区域-->
+            <div class="list">
+                <div class="col-5">
+                    <img src="images/2.webp" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="images/3.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 新碟首发 模块 -->
+    <div class="content bg1 py-3">
+        <div class="w">
+            <h2 class="title">新碟首发</h2>
+            <!--搭建索引条-->
+            <ul class="list-row">
+                <li class="active"><a href="#">内地</a></li>
+                <li><a href="#">港台</a></li>
+                <li><a href="#">欧美</a></li>
+                <li><a href="#">韩国</a></li>
+                <li><a href="#">日本</a></li>
+                <li><a href="#">其他</a></li>
+            </ul>
+            <div class="list">
+                <!--搭建内容区域-->
+                <div class="list">
+                    <!-- 样式1 -->
+                    <div class="col-2">
+                        <div class="card">
+                            <div class="pic">
+                                <img src="images/pic6.webp" alt="">
+                                <i></i>
+                            </div>
+                            <p><a href="#">电影《音乐之声》中的经典歌曲</a></p>
+                            <span>播放量：321.5万</span>
+                        </div>
+                    </div>
+                    <!-- 样式2 -->
+                    <div class="col-2">
+                        <div class="card">
+                            <div class="pic">
+                                <img src="images/pic7.webp" alt="">
+                                <i></i>
+                            </div>
+                            <p><a href="#">全球K-pop趋势 | TWICE华丽回归 述说爱的策略</a></p>
+                            <span>播放量：122.5万</span>
+                        </div>
+                    </div>
+                    <!-- 样式3 -->
+                    <div class="col-2">
+                        <div class="card">
+                            <div class="pic">
+                                <img src="images/pic8.webp" alt="">
+                                <i></i>
+                            </div>
+                            <p><a href="#">君の名は。(动画电影《你的名字。》原声带)</a></p>
+                            <span>播放量：255.5万</span>
+                        </div>
+                    </div>
+                    <!-- 样式4 -->
+                    <div class="col-2">
+                        <div class="card">
+                            <div class="pic">
+                                <img src="images/pic9.webp" alt="">
+                                <i></i>
+                            </div>
+                            <p><a href="#">【韩语】KOPO韩语歌曲嗨到爆</a></p>
+                            <span>播放量：142.2万</span>
+                        </div>
+                    </div>
+                    <!-- 样式5 -->
+                    <div class="col-2">
+                        <div class="card">
+                            <div class="pic">
+                                <img src="images/pic10.webp" alt="">
+                                <i></i>
+                            </div>
+                            <p><a href="#">浪漫主义乐队合集</a></p>
+                            <span>播放量：132.1万</span>
+                        </div>
+                    </div>
+                    <!-- 样式6 -->
+                    <div class="col-2">
+                        <div class="card">
+                            <div class="pic">
+                                <img src="images/pic5.jpg" alt="">
+                                <i></i>
+                            </div>
+                            <p><a href="#">悲惨世界音乐剧十周年纪念版</a></p>
+                            <span>播放量：152.5万</span>
+                        </div>
+                    </div>
+                    <!-- 样式7 -->
+                    <div class="col-2">
+                        <div class="card">
+                            <div class="pic">
+                                <img src="images/pic4.jpg" alt="">
+                                <i></i>
+                            </div>
+                            <p><a href="#">「我還想和你談論宇宙和天空.」</a></p>
+                            <span>播放量：142.5万</span>
+                        </div>
+                    </div>
+                    <!-- 样式8 -->
+                    <div class="col-2">
+                        <div class="card">
+                            <div class="pic">
+                                <img src="images/pic3.jpg" alt="">
+                                <i></i>
+                            </div>
+                            <p><a href="#">经典老歌 | 90后回忆杀 神仙打架的华语乐坛</a></p>
+                            <span>播放量：182.5万</span>
+                        </div>
+                    </div>
+                    <!-- 样式9 -->
+                    <div class="col-2">
+                        <div class="card">
+                            <div class="pic">
+                                <img src="images/pic2.jpg" alt="">
+                                <i></i>
+                            </div>
+                            <p><a href="#">CPOP中国流行嘻哈</a></p>
+                            <span>播放量：218.5万</span>
+                        </div>
+                    </div>
+                    <!-- 样式10 -->
+                    <div class="col-2">
+                        <div class="card">
+                            <div class="pic">
+                                <img src="images/pic1.png" alt="">
+                                <i></i>
+                            </div>
+                            <p><a href="#">宿命感 | 好听的韩剧ost合集</a></p>
+                            <span>播放量：222.5万</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+ <!--一键到顶部-->
+    <div id = "gotop">
+        <img src="images/bili-2.png" alt="gotop">
+    </div>
+    
+    <!-- 页脚 模块 -->
+    <footer class="footer py-3">
+        <div class="w">
+            <!--搭建友情链接-->
+            <div class="links">
+                <div class="tit">友情链接</div>
+                <a href="https://y.qq.com/?ADTAG=myqq#type=index">QQ音乐  </a>
+                <a href="https://music.163.com/">网易云音乐  </a>
+                <a href="https://www.kugou.com/">酷狗音乐  </a>
+                <a href="https://kuwo.cn/">酷我音乐</a>
+              
+                <p class="mt-2">Copyright © 1998 - 2022 Musi. All Rights Reserved.</p>
+            </div>
+            <!--搭建合作伙伴-->
+            <div class="copy">
+                <div class="tit">合作伙伴</div>
+                <div class="list">
+                    <div class="item">
+                        <img src="./images/bili-1.png" alt="">
+                        <p>点赞</p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/bili-2.png" alt="">
+                        <p>投币</p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/bili-3.png" alt="">
+                        <p>收藏</p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/bili-4.png" alt="">
+                        <p>关注</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 外联式：轮播图js（插件） -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {//捕获元素信息
+            spaceBetween: 30,//间距
+            //设置自动播放
+            autoplay: {
+                delay: 3000,//自动切换时间间隔，3000ms
+                stopOnLastSlide: false,//切换到最后一个slide停止切换
+                disableOnInteraction: true,//用户操作完swiper，是否停止播放
+            },
+            //设置分页器
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,//点击分页器的指示点分页器会控制Swiper切换。
+            },
+        });
+    </script>
+     <!--一健到顶部-->
+     <script>
+        window.addEventListener("scroll",handle)
+        function handle(){
+            //要获取当前的滚动条纵坐标位置，documentElement对应的是html标签
+            var oTop = document.body.scrollTop||document.documentElement.scrollTop
+            if(oTop>=200){
+                gotop.style.display = "block";
+            }else{
+                gotop.style.display = "none";
+            }
+
+            gotop.onclick = function(){
+                window.scrollTo({
+                    top:0,
+                    behavior:"smooth"
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>

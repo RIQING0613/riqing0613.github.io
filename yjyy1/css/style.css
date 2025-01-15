@@ -1,0 +1,564 @@
+/*基本样式*/
+/*清空页面，减少误差*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+button,
+input {
+  outline: none;
+  border: none;
+}
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+/* 滚动条的宽度和长度 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 5px;
+}
+/* 滚动槽 的背景颜色和角弧度*/
+::-webkit-scrollbar-track {
+  background-color: rgba(156, 153, 153, 0.048);
+  border-radius: 10px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ccc;
+}
+body {
+  color: #fff;
+  line-height: 1.5;
+  font-family: poppin, Tahoma, Arial, sans-serif;
+  font-family: Tahoma, Arial, sans-serif, 9;
+  background: #131316;
+}
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+.bg1 {
+  background: #131316;
+}
+.bg2 {
+  background: #131316;
+}
+.text-red {
+  color: #ff4222;
+}
+.d-flex {
+  display: flex;
+}
+.py-3 {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.pb-3 {
+  padding-bottom: 25px;
+}
+.mt-3 {
+  margin-top: 25px;
+}
+.mt-2 {
+  margin-top: 15px;
+}
+.col-1 {
+  padding: 0 15px;
+  width: 10%;
+}
+.col-2 {
+  padding: 0 15px;
+  width: 20%;
+}
+.col-3 {
+  padding: 0 15px;
+  width: 30%;
+}
+.col-5 {
+  padding: 0 15px;
+  width: 50%;
+}
+.title {
+  padding: 25px 0;
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-size: 30px;
+  font-weight: 500;
+}
+.tag {
+  padding: 2px 5px;
+  color: #fff;
+  background: #ff4222;
+  font-size: 12px;
+}
+.list-row {
+  padding: 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list-row li a {
+  margin: 0 25px;
+}
+.list-row li:hover a,
+.list-row li.active a {
+  color: #31c27c;
+}
+.list-select {
+  display: flex;
+  margin-bottom: 15px;
+}
+.list-select:last-child {
+  margin-bottom: 0;
+}
+.list-select li {
+  margin-right: 20px;
+}
+.list-select li a {
+  display: flex;
+  height: 30px;
+}
+.list-select li a:hover {
+  color: #31c27c;
+}
+.list-select .list-all {
+  margin-right: 30px;
+}
+.list-select .list-all a {
+  padding: 0 8px;
+  color: #fff;
+  background: #31c27c;
+}
+.list-col {
+  margin-bottom: 20px;
+}
+.list-col .first {
+  margin: 0 20px 10px;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 60px;
+  border-bottom: 1px solid #ccc;
+}
+.list-col .first:hover {
+  background: transparent;
+}
+.list-col li {
+  line-height: 38px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+.list-col li:hover {
+  transition: all 0.3s;
+  background: #31c27c;
+}
+.list-col .active {
+  background: #31c27c;
+}
+.card .pic {
+  margin-bottom: 15px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.card .pic img {
+  object-fit: cover;
+}
+/*卡片信息*/
+.card .pic i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1);/*缩放效果*/
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2) url(../images/icon-play.png) no-repeat center;/*显示背景图片*/
+  background-size: 70px 70px;
+  opacity: 0;/*完全透明度*/
+}
+/*如果鼠标扫过图片，0.5s动画效果*/
+.card .pic:hover img {
+  transition: all 0.5s;
+  transform: scale(1.1);
+}
+/*如果鼠标扫过图片，i标签动画效果*/
+.card .pic:hover i {
+  transition: all 0.5s;
+  transform: scale(1.1);
+  opacity: 1;
+}
+.card p a:hover {
+  color: #31c27c;
+}
+.card span {
+  color: #ccc;
+}
+.card-bdr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-bdr img {
+  margin-bottom: 15px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+.card-bdr a:hover {
+  color: #31c27c;
+}
+.header {
+  position: sticky;
+  top: 0;
+  height: 85px;
+  z-index: 99;
+  background: #1e1e1f;
+}
+.nav {
+  display: flex;
+  height: 100%;
+}
+.nav .logo {
+  margin-right: 111px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 49px;
+}
+.nav .logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-right: 2px solid #fea92a;
+}
+.nav .logo-bili {
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav .logo-bili .avatarBox {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  z-index: 99;
+  background: #fff;
+}
+.nav .logo-bili .avatarBox:hover {
+  transition: all 0.3s;
+  transform: translateY(60%) scale(1.6);
+}
+.nav .logo-bili .avatarBox .avatarImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.nav .logo-bili .avatarBox .avatarBoder {
+  position: absolute;
+  height: 176.48%;
+  width: 176.48%;
+  top: -38.33%;
+  left: -38.33%;
+  overflow: hidden;
+}
+.nav .logo-bili .avatarBox .avatarBoder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nav .nav-meau {
+  display: flex;
+  height: 100%;
+  margin-right: 50px;
+}
+.nav .nav-meau li a {
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+.nav .nav-meau li:hover a,
+.nav .nav-meau li.active a {
+  transition: all 0.3s;
+  background: #31c27c;
+}
+.nav .search {
+  display: flex;
+  align-items: center;
+}
+.nav .search input {
+  padding-left: 15px;
+  width: 250px;
+  height: 45px;
+  color: #fff;
+  background: transparent;
+  border-bottom: 1px solid #31c27c;
+}
+.nav .search button {
+  padding: 0 25px;
+  height: 45px;
+  cursor: pointer;
+  color: #fff;
+  background: #31c27c;
+}
+.content .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content .list .card {
+  margin-bottom: 25px;
+}
+.footer {
+  color: #ccc;
+}
+.footer a {
+  color: #ccc;
+}
+.footer .w {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .tit {
+  margin-bottom: 15px;
+}
+.footer .links {
+  margin-bottom: 15px;
+  flex: 1;
+  margin-right: 15px;
+}
+.footer .links a {
+  position: relative;
+  margin-right: 5px;
+}
+.footer .links a:last-child {
+  margin-right: 0;
+}
+.footer .links a:hover {
+  color: #31c27c;
+}
+
+.footer .copy {
+  flex: 1;
+}
+.footer .copy .list {
+  display: flex;
+}
+.footer .copy .list .item {
+  margin-right: 25px;
+  text-align: center;
+}
+.footer .copy .list .item:last-child {
+  margin-right: 0;
+}
+.footer .copy .list .item img {
+  margin-bottom: 10px;
+  width: 50px;
+}
+
+.banner {
+  height: 376px;
+  background: url(../images/bg1.webp) repeat-x;
+}
+.contentSinger .list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contentSinger .list .card-bdr {
+  width: 20%;
+  margin-bottom: 50px;
+}
+.contentSongList .list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contentSongList .list .card {
+  margin-bottom: 25px;
+}
+.contentSong .d-flex {
+  justify-content: space-between;
+}
+.contentSong .contentSong-l {
+  margin: -25px 0;
+  width: 200px;
+}
+.contentSong .contentSong-r {
+  width: 950px;
+}
+.contentSong .contentSong-r .tit {
+  font-weight: 400;
+}
+.contentSong .contentSong-r .tit span {
+  margin: 0 15px;
+  font-size: 14px;
+}
+.contentSong .contentSong-r .select-btn button {
+  margin-right: 8px;
+  padding: 0 25px;
+  height: 40px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  color: #fff;
+  background: transparent;
+}
+.contentSong .contentSong-r .select-btn button:hover,
+.contentSong .contentSong-r .select-btn button.active {
+  transition: all 0.3s;
+  background: #31c27c;
+  border: 1px solid #31c27c;
+}
+.contentSong .contentSong-r .songList li {
+  display: flex;
+  height: 80px;
+}
+.contentSong .contentSong-r .songList li > div {
+  display: flex;
+  align-items: center;
+}
+.contentSong .contentSong-r .songList li.head {
+  height: 50px;
+}
+.contentSong .contentSong-r .songList li.active,
+.contentSong .contentSong-r .songList li:hover {
+  transition: all 0.3s;
+  background: #02023f;
+}
+.contentSong .contentSong-r .songList li .num {
+  margin-right: 10px;
+  width: 40px;
+  text-align: center;
+  font-size: 25px;
+}
+.contentSong .contentSong-r .songList li .itemSong {
+  position: relative;
+}
+.contentSong .contentSong-r .songList li .itemSong img {
+  margin-right: 20px;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+.contentSong .contentSong-r .songList li .itemSong a:hover {
+  color: #31c27c;
+}
+.contentSong .contentSong-r .songList li .itemSong .play {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+}
+.contentSong .contentSong-r .songList li .itemSong .play .btn-play {
+  width: 40px;
+  height: 40px;
+  background: transparent url(../images/icon-play.png) no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+}
+.contentSong .contentSong-r .songList li .itemSong:hover .play {
+  transition: all 0.5s;
+  opacity: 1;
+}
+.fixedSong {
+  margin-top: 30px;
+  width: 100%;
+  height: 50px;
+}
+.fixedSong audio {
+  width: 100%;
+  height: 100%;
+}
+.contentLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contentLogin .login {
+  width: 370px;
+}
+.contentLogin .login h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.contentLogin .login .ipt {
+  margin-bottom: 15px;
+}
+.contentLogin .login .ipt input {
+  padding-left: 15px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid transparent;
+}
+.contentLogin .login .ipt input:focus {
+  border: 1px solid #31c27c;
+  box-shadow: 0 0 30px #31c27c;
+}
+.contentLogin .login button {
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  color: #fff;
+  background: #31c27c;
+}
+.contentLogin .login p {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+/*轮播图*/
+.bannerSwiper {
+  height: 700px;
+}
+.bannerSwiper .swiper {
+  width: 100%;
+  height: 100%;
+}
+.bannerSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50%;
+}
+.bannerSwiper .swiper-pagination-bullet {
+  width: 35px;
+  height: 10px;
+  border-radius: 0;
+}
+.bannerSwiper .swiper-pagination-bullet-active {
+  background: #fff;
+}
+/*一健到顶部*/
+#gotop{
+  position: fixed;
+  display: none;
+  right: 0;
+  bottom: 0;
+}
+#gotop img{
+  width: 55px;
+  height: 55px;
+
+}
+#gotop img:hover{
+  cursor: pointer;
+}
